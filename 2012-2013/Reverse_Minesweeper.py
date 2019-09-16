@@ -169,8 +169,6 @@ def solve_minefield(mine_field, x, y):
                     else:
                         row.append(count)
 
-
-
         solved_mine_field.append(row)
         row = []
 
@@ -182,9 +180,6 @@ def solve_minefield(mine_field, x, y):
 
 
 def main():
-    # f = open('input.txt')
-    # contents = f.readlines()
-    # f.close()
 
     contents = sys.stdin.readlines()
 
@@ -202,14 +197,6 @@ def main():
             row.append(int(j.rstrip('\n')))
         mine_field.append(row)
         row = []
-    # print(mine_field)
-
-
-    # to obtain the coordinates of the mine field
-    # for i in range(len(mine_field)):
-    #     for j in range(len(mine_field[i])):
-    #         print('(' + str(i) + ',' + str(j) + ')', end = ' ')
-    #     print('\n')
 
     solve_minefield(mine_field, x, y)
 
